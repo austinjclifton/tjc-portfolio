@@ -21,11 +21,11 @@ export const portfolio = {
     biography: undefined as string | undefined,
     portrait: undefined as string | undefined,
   },
-  navigation: ['about', 'experience', 'projects', 'skills', 'education', 'contact'],
+  navigation: ['about', 'experience', 'education', 'projects', 'skills', 'contact'],
   experience: [
-    { organization: "Saint Peter’s University", eyebrow: 'Experience 01', status: 'confirmed', theme: { background: '#003B70', foreground: '#FFFFFF', accent: '#6DB5E7', source: brandSources.saintPeters, verified: true } },
+    { organization: 'Dixon Schwabl + Company', eyebrow: 'Experience 01', status: 'confirmed', theme: { background: '#D65432', foreground: '#171713', accent: '#F7DDD4', source: brandSources.dsco, verified: false } },
     { organization: 'Stevens Institute of Technology', eyebrow: 'Experience 02', status: 'confirmed', theme: { background: '#7A2431', foreground: '#FFF9F4', accent: '#E7BEC5', source: brandSources.stevens, verified: false } },
-    { organization: 'Dixon Schwabl + Company', eyebrow: 'Experience 03', status: 'confirmed', theme: { background: '#EEE9DF', foreground: '#171713', accent: '#D65432', source: brandSources.dsco, verified: false } },
+    { organization: "Saint Peter’s University", eyebrow: 'Experience 03', status: 'confirmed', theme: { background: '#003B70', foreground: '#FFFFFF', accent: '#6DB5E7', source: brandSources.saintPeters, verified: true } },
   ] as Experience[],
   projects: [
     { title: 'Selected work, coming into focus', category: 'Campaign / project placeholder', description: 'A flexible case-study format ready for the brief, Trevor’s role, the creative response, and the final work.', status: 'placeholder' },
@@ -37,8 +37,8 @@ export const portfolio = {
     { title: 'Collaboration', items: ['Working style to confirm', 'Team experience to confirm', 'Tools to confirm'] },
   ],
   education: [
-    { institution: 'SUNY Geneseo', status: 'confirmed', theme: { background: '#003087', foreground: '#FFFFFF', accent: '#DAAA00', source: brandSources.geneseo, verified: true } },
     { institution: "Saint Peter’s University", status: 'confirmed', theme: { background: '#E5EFF8', foreground: '#082B4C', accent: '#0072CE', source: brandSources.saintPeters, verified: true } },
+    { institution: 'SUNY Geneseo', status: 'confirmed', theme: { background: '#003087', foreground: '#FFFFFF', accent: '#DAAA00', source: brandSources.geneseo, verified: true } },
   ] as Education[],
   contact: { email: undefined as string | undefined, linkedIn: undefined as string | undefined, otherLinks: [] as { label: string; href: string }[], resume: undefined as string | undefined },
 }
