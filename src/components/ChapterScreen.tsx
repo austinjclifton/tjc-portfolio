@@ -40,7 +40,7 @@ export function ChapterScreen({ title, theme, details }: ChapterScreenProps) {
       </div>
       <div className="chapter-footer" data-reveal>
         <div className="chapter-details">
-          {details.map((detail, index) => (
+          {details.map((detail) => (
             <div className={Array.isArray(detail.value) ? 'chapter-detail chapter-detail--list' : 'chapter-detail'} key={detail.label}>
               <span>{detail.label}</span>
               {Array.isArray(detail.value) ? (
@@ -50,7 +50,6 @@ export function ChapterScreen({ title, theme, details }: ChapterScreenProps) {
               ) : (
                 <p>{detail.value}</p>
               )}
-              <small aria-hidden="true">{String(index + 1).padStart(2, '0')}</small>
             </div>
           ))}
         </div>
