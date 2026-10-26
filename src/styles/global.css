@@ -55,7 +55,7 @@ em { font-family: var(--font-serif); font-weight: 400; }
 .chapter-detail p { margin: 0; max-width: 38rem; line-height: 1.5; }
 .chapter-detail ul { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
 .chapter-detail li { position: relative; padding-left: 1rem; line-height: 1.45; }
-.chapter-detail li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+.chapter-detail li::before { content: '+'; position: absolute; left: 0; top: .15em; color: var(--accent); font-size: .8em; font-weight: 700; }
 .projects, .skills { padding-top: 6rem; padding-bottom: 7rem; }
 .section-heading { display: grid; gap: 4rem; margin-bottom: 4rem; }
 .section-heading h2 { margin: 1rem 0 0; font-size: clamp(3.35rem, 13vw, 8.5rem); }
