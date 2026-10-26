@@ -62,7 +62,7 @@ Brand values are kept in `src/data/portfolio.ts`, separate from the portfolio’
 - [Stevens branding resources](https://www.stevens.edu/page-chapter/branding-resources) — confirms maroon and gray as the institutional palette, but the detailed guide is access-restricted. The current maroon is a temporary token pending an official digital value.
 - [DS+CO](https://dixonschwabl.com/about/) — the organization uses a flexible identity. The warm neutral and orange are portfolio-specific temporary tokens, not claimed as official brand values.
 
-No logos or copyrighted organization artwork are included, and the site does not imply organizational endorsement.
+Organization marks are loaded from the organizations’ own public web assets and used as low-opacity decorative backgrounds. They remain paired with plain-text organization names and do not imply endorsement. Saint Peter’s, Stevens, and SUNY Geneseo publish approval or access requirements for formal logo use; obtain the appropriate brand review before production launch. If approval is not available, remove the `logo` fields from `src/data/portfolio.ts` and the layout will remain complete.
 
 ## Deployment to Vercel
 
