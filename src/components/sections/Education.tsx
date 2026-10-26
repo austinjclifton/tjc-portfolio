@@ -1,0 +1,3 @@
+import { portfolio } from '../../data/portfolio'
+import { StatusLabel } from '../ui/StatusLabel'
+export function Education() { return <div id="education">{portfolio.education.map((item, index) => <section className="education-card themed-section" key={item.institution} data-theme-bg={item.theme.background} data-theme-fg={item.theme.foreground}><div className="section-number">{index === 0 ? '05 / Education' : '05 / Continued'}</div><div data-reveal><p className="kicker">Institution confirmed</p><h2>{item.institution}</h2><div className="education-meta"><StatusLabel>Degree and dates needed</StatusLabel><p>Academic details will be added after Trevor confirms them.</p></div></div></section>)}</div> }
