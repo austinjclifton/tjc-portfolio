@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-import { Header } from './components/layout/Header'
 import { About } from './components/sections/About'
 import { Contact } from './components/sections/Contact'
 import { Education } from './components/sections/Education'
@@ -14,5 +13,5 @@ export default function App() {
   const backdrop = useRef<HTMLDivElement>(null)
   useScrollThemes(container, backdrop)
   useSectionReveals(container)
-  return <><a className="skip-link" href="#about">Skip to content</a><div className="page-backdrop" ref={backdrop} aria-hidden="true" /><Header /><main ref={container}><Hero /><About /><Experience /><Education /><Projects /><Skills /><Contact /></main></>
+  return <><a className="skip-link" href="#about">Skip to content</a><div className="page-backdrop" ref={backdrop} aria-hidden="true" /><main ref={container}><Hero /><About /><Experience /><Education /><Projects /><Skills /><Contact /></main></>
 }

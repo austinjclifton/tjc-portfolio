@@ -21,7 +21,6 @@ export const portfolio = {
     biography: undefined as string | undefined,
     portrait: undefined as string | undefined,
   },
-  navigation: ['about', 'experience', 'education', 'projects', 'skills', 'contact'],
   experience: [
     { organization: 'Dixon Schwabl + Company', eyebrow: 'Experience 01', status: 'confirmed', theme: { background: '#D65432', foreground: '#171713', accent: '#F7DDD4', source: brandSources.dsco, verified: false } },
     { organization: 'Stevens Institute of Technology', eyebrow: 'Experience 02', status: 'confirmed', theme: { background: '#7A2431', foreground: '#FFF9F4', accent: '#E7BEC5', source: brandSources.stevens, verified: false } },
