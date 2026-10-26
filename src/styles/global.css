@@ -58,7 +58,9 @@ em { font-family: var(--font-serif); font-weight: 400; }
 .visual-2 { background-color: #a2573e; background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,.28) 0 1px, transparent 2px); background-size: 18px 18px; }
 .project-card-copy h3 { margin: .5rem 0 1rem; max-width: 17ch; font-size: clamp(2rem, 8vw, 3.6rem); }
 .project-card-copy > p:not(.project-category) { line-height: 1.6; max-width: 33rem; }
-.inactive-link, .disabled-action { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; padding: .75rem 0; border-bottom: 1px solid var(--border); opacity: .62; }
+.inactive-link, .disabled-action { align-items: center; min-height: 44px; padding: .75rem 0; border-bottom: 1px solid var(--border); opacity: .62; }
+.inactive-link { display: inline-flex; width: fit-content; gap: .45rem; white-space: nowrap; }
+.disabled-action { display: flex; justify-content: space-between; gap: 1rem; }
 .skill-list { display: grid; }
 .skill-list article { padding: 1.25rem 0 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 2.5rem 1fr; }
 .skill-list article > p { font-size: .65rem; }
