@@ -1,3 +1,22 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ChapterScreen } from '../ChapterScreen'
 import { portfolio } from '../../data/portfolio'
-export function Experience() { return <div id="experience">{portfolio.experience.map((item) => <section className="experience-chapter themed-section brand-stage" key={item.organization} data-theme-bg={item.theme.background} data-theme-fg={item.theme.foreground} style={{ '--accent': item.theme.accent } as React.CSSProperties}>{item.theme.logo && <img className={`brand-watermark brand-watermark--${item.theme.logoTone}${item.theme.logoScale ? ` brand-watermark--${item.theme.logoScale}` : ''}`} src={item.theme.logo} alt="" aria-hidden="true" loading="lazy" decoding="async" />}<p className="chapter-index">{item.eyebrow}</p><div className="chapter-title" data-reveal><h3>{item.organization}</h3></div><div className="chapter-details" data-reveal><div><span>Role</span><p>To be confirmed</p></div><div><span>Timeline</span><p>To be confirmed</p></div><div><span>Story</span><p>Responsibilities, perspective, and selected achievements will live here once supplied by Trevor.</p></div></div>{item.theme.source && <a className="source-link" href={item.theme.source} target="_blank" rel="noreferrer">Brand source <ArrowUpRight size={14} aria-hidden="true" /></a>}</section>)}</div> }
+
+export function Experience() {
+  return (
+    <div id="experience">
+      {portfolio.experience.map((item) => (
+        <ChapterScreen
+          key={item.organization}
+          eyebrow={item.eyebrow}
+          title={item.organization}
+          theme={item.theme}
+          details={[
+            { label: 'Role', value: item.title ?? 'To be confirmed' },
+            { label: 'Timeline', value: item.dates ?? 'To be confirmed' },
+            { label: 'Story', value: item.description ?? 'Responsibilities and selected achievements will be added here.' },
+          ]}
+        />
+      ))}
+    </div>
+  )
+}
