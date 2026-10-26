@@ -1,6 +1,6 @@
 export type ContentStatus = 'confirmed' | 'placeholder'
 
-export type Theme = { background: string; foreground: string; accent: string; source?: string; logo?: string; logoTone?: 'light' | 'dark' | 'multiply'; logoScale?: 'compact'; verified: boolean }
+export type Theme = { background: string; foreground: string; accent: string; source?: string; logo?: string; logoTone?: 'light' | 'dark' | 'multiply' | 'original'; logoScale?: 'compact'; verified: boolean }
 export type Experience = { organization: string; eyebrow: string; status: ContentStatus; title?: string; dates?: string; description?: string; accomplishments?: string[]; link?: string; theme: Theme }
 export type Project = { title: string; category?: string; description?: string; organization?: string; date?: string; images?: { src: string; alt: string }[]; externalLink?: string; outcomes?: string[]; status: ContentStatus }
 export type Education = { institution: string; degree?: string; field?: string; dates?: string; status: ContentStatus; theme: Theme }
@@ -37,7 +37,7 @@ export const portfolio = {
   ],
   education: [
     { institution: "Saint Peter’s University", status: 'confirmed', theme: { background: '#E5EFF8', foreground: '#082B4C', accent: '#0072CE', source: brandSources.saintPeters, logo: 'https://www.saintpeters.edu/wp-content/themes/spc-base-theme/images/favicon/safari-pinned-tab.svg', logoTone: 'dark', verified: true } },
-    { institution: 'SUNY Geneseo', status: 'confirmed', theme: { background: '#003087', foreground: '#FFFFFF', accent: '#DAAA00', source: brandSources.geneseo, logo: 'https://www.geneseo.edu/wp-content/uploads/2026/07/PrimaryBrandmark_onWhite-2.png', logoTone: 'light', logoScale: 'compact', verified: true } },
+    { institution: 'SUNY Geneseo', status: 'confirmed', theme: { background: '#003087', foreground: '#FFFFFF', accent: '#DAAA00', source: brandSources.geneseo, logo: 'https://www.geneseo.edu/wp-content/uploads/2026/07/PrimaryBrandmark_onWhite-2.png', logoTone: 'original', logoScale: 'compact', verified: true } },
   ] as Education[],
   contact: { email: undefined as string | undefined, linkedIn: undefined as string | undefined, otherLinks: [] as { label: string; href: string }[], resume: undefined as string | undefined },
 }
