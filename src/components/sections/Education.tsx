@@ -10,9 +10,10 @@ export function Education() {
           title={item.institution}
           theme={item.theme}
           details={[
-            { label: 'Degree', value: item.degree ?? 'To be confirmed' },
+            { label: 'Degree', value: [item.degree, item.field].filter(Boolean).join(' · ') || 'Degree and field of study' },
             { label: 'Timeline', value: item.dates ?? 'To be confirmed' },
-            { label: 'Story', value: item.field ?? 'Academic focus and milestones will be added here.' },
+            { label: 'Academic focus', value: item.description ?? 'Add a short note about coursework, interests, or a defining academic experience.' },
+            { label: 'Activities', value: item.activities ?? ['Add a club, organization, or leadership role.', 'Add an award, publication, or campus activity.'] },
           ]}
         />
       ))}

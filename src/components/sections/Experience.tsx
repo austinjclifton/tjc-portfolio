@@ -12,7 +12,8 @@ export function Experience() {
           details={[
             { label: 'Role', value: item.title ?? 'To be confirmed' },
             { label: 'Timeline', value: item.dates ?? 'To be confirmed' },
-            { label: 'Story', value: item.description ?? 'Responsibilities and selected achievements will be added here.' },
+            { label: 'What I do', value: item.description ?? 'Add a concise overview of the work, the team, and the day-to-day contribution.' },
+            { label: 'Selected focus', value: item.accomplishments ?? ['Add a campaign, launch, or key initiative.', 'Add a measurable result or meaningful outcome.'] },
           ]}
         />
       ))}

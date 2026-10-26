@@ -2,7 +2,7 @@ import type { Theme } from '../data/portfolio'
 
 type ChapterDetail = {
   label: string
-  value: string
+  value: string | string[]
 }
 
 type ChapterScreenProps = {
@@ -40,10 +40,17 @@ export function ChapterScreen({ title, theme, details }: ChapterScreenProps) {
       </div>
       <div className="chapter-footer" data-reveal>
         <div className="chapter-details">
-          {details.map((detail) => (
-            <div key={detail.label}>
+          {details.map((detail, index) => (
+            <div className={Array.isArray(detail.value) ? 'chapter-detail chapter-detail--list' : 'chapter-detail'} key={detail.label}>
               <span>{detail.label}</span>
-              <p>{detail.value}</p>
+              {Array.isArray(detail.value) ? (
+                <ul>
+                  {detail.value.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              ) : (
+                <p>{detail.value}</p>
+              )}
+              <small aria-hidden="true">{String(index + 1).padStart(2, '0')}</small>
             </div>
           ))}
         </div>
