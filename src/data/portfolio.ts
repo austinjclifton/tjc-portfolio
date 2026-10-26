@@ -1,6 +1,6 @@
 export type ContentStatus = 'confirmed' | 'placeholder'
 
-export type Theme = { background: string; foreground: string; accent: string; source?: string; logo?: string; logoTone?: 'light' | 'dark' | 'multiply' | 'original'; logoScale?: 'compact'; verified: boolean }
+export type Theme = { background: string; foreground: string; accent: string; source?: string; logo?: string; logoTone?: 'light' | 'dark' | 'multiply' | 'original'; logoScale?: 'compact' | 'reduced'; verified: boolean }
 export type Experience = { organization: string; eyebrow: string; status: ContentStatus; title?: string; dates?: string; description?: string; accomplishments?: string[]; link?: string; theme: Theme }
 export type Project = { title: string; category?: string; description?: string; organization?: string; date?: string; images?: { src: string; alt: string }[]; externalLink?: string; outcomes?: string[]; status: ContentStatus }
 export type Education = { institution: string; degree?: string; field?: string; dates?: string; status: ContentStatus; theme: Theme }
@@ -22,7 +22,7 @@ export const portfolio = {
     portrait: undefined as string | undefined,
   },
   experience: [
-    { organization: 'Dixon Schwabl + Company', eyebrow: 'Experience 01', status: 'confirmed', theme: { background: '#D65432', foreground: '#171713', accent: '#F7DDD4', source: brandSources.dsco, logo: 'https://dsco.us-east-1.linodeobjects.com/static/dsco-logo-square-padding.png', logoTone: 'multiply', verified: false } },
+    { organization: 'Dixon Schwabl + Company', eyebrow: 'Experience 01', status: 'confirmed', theme: { background: '#D65432', foreground: '#171713', accent: '#F7DDD4', source: brandSources.dsco, logo: 'https://dsco.us-east-1.linodeobjects.com/static/dsco-logo-square-padding.png', logoTone: 'multiply', logoScale: 'reduced', verified: false } },
     { organization: 'Stevens Institute of Technology', eyebrow: 'Experience 02', status: 'confirmed', theme: { background: '#7A2431', foreground: '#FFF9F4', accent: '#E7BEC5', source: brandSources.stevens, logo: 'https://www.stevens.edu/favicon/safari-pinned-tab.svg', logoTone: 'light', verified: false } },
     { organization: "Saint Peter’s University", eyebrow: 'Experience 03', status: 'confirmed', theme: { background: '#003B70', foreground: '#FFFFFF', accent: '#6DB5E7', source: brandSources.saintPeters, logo: 'https://www.saintpeters.edu/wp-content/themes/spc-base-theme/images/favicon/safari-pinned-tab.svg', logoTone: 'light', verified: true } },
   ] as Experience[],
