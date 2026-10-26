@@ -7,7 +7,6 @@ export function Experience() {
       {portfolio.experience.map((item) => (
         <ChapterScreen
           key={item.organization}
-          eyebrow={item.eyebrow}
           title={item.organization}
           theme={item.theme}
           details={[

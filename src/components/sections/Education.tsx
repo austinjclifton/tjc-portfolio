@@ -4,10 +4,9 @@ import { portfolio } from '../../data/portfolio'
 export function Education() {
   return (
     <div id="education">
-      {portfolio.education.map((item, index) => (
+      {portfolio.education.map((item) => (
         <ChapterScreen
           key={item.institution}
-          eyebrow={`Education ${String(index + 1).padStart(2, '0')}`}
           title={item.institution}
           theme={item.theme}
           details={[

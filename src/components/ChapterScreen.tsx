@@ -6,13 +6,12 @@ type ChapterDetail = {
 }
 
 type ChapterScreenProps = {
-  eyebrow: string
   title: string
   theme: Theme
   details: ChapterDetail[]
 }
 
-export function ChapterScreen({ eyebrow, title, theme, details }: ChapterScreenProps) {
+export function ChapterScreen({ title, theme, details }: ChapterScreenProps) {
   const logoClasses = [
     'brand-watermark',
     theme.logoTone ? `brand-watermark--${theme.logoTone}` : '',
@@ -36,7 +35,6 @@ export function ChapterScreen({ eyebrow, title, theme, details }: ChapterScreenP
           decoding="async"
         />
       )}
-      <p className="chapter-index">{eyebrow}</p>
       <div className="chapter-title" data-reveal>
         <h2>{title}</h2>
       </div>
