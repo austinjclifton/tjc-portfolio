@@ -13,6 +13,7 @@ describe('portfolio content', () => {
     expect(portfolio.education.every((entry) => entry.degree && entry.field && entry.activities?.length)).toBe(true)
     expect(portfolio.projects.every((project) => project.status === 'placeholder')).toBe(true)
     expect(portfolio.contact.email).toBeUndefined()
+    expect(portfolio.contact.linkedIn).toBe('https://www.linkedin.com/in/trevorclifton3/')
     expect(portfolio.contact.resume).toBeUndefined()
   })
 })

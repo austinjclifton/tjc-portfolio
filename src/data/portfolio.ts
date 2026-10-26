@@ -72,7 +72,7 @@ export const portfolio = {
       theme: { background: '#003087', foreground: '#FFFFFF', accent: '#DAAA00', source: brandSources.geneseo, logo: 'https://www.geneseo.edu/wp-content/uploads/2026/07/PrimaryBrandmark_onWhite-2.png', logoTone: 'original', logoScale: 'compact', verified: true },
     },
   ] as Education[],
-  contact: { email: undefined as string | undefined, linkedIn: undefined as string | undefined, otherLinks: [] as { label: string; href: string }[], resume: undefined as string | undefined },
+  contact: { email: undefined as string | undefined, linkedIn: 'https://www.linkedin.com/in/trevorclifton3/', otherLinks: [] as { label: string; href: string }[], resume: undefined as string | undefined },
 }
 
 export type PortfolioContent = typeof portfolio
